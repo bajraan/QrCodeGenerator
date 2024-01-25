@@ -41,7 +41,7 @@ This repository serves as a comprehensive guide to Markdown syntax. Markdown is 
 
 <div align="center">
     <a href="https://github.com/scottgriv/markdown-demo" target="_blank">
-        <img src="./11_UserSvgOutput/CIS-CIE-CIE-4-1.svg" width="200" height="200"/>
+        <img src="./10_UserSvgStyleSample/CIS-CIE-CIE-4-1.svg" width="200" height="200"/>
     </a>
 </div>
 
@@ -61,7 +61,7 @@ border = 1;
 ---------------
 <div align="center">
     <a href="https://scottgrivner.dev" target="_blank">
-        <img src="./11_UserSvgOutput/SQU-CIE-CIS-4-2.svg" width="200" height="200"/>
+        <img src="./10_UserSvgStyleSample/SQU-CIE-CIS-4-2.svg" width="200" height="200"/>
     </a>
 </div>
 
@@ -81,7 +81,7 @@ border = 2;
 ---------------
 <div align="center">
     <a href="https://github.com/scottgriv/markdown-demo" target="_blank">
-        <img src="./11_UserSvgOutput/ROD-CIR-ROD-4-2.svg" width="200" height="200"/>
+        <img src="./10_UserSvgStyleSample/ROD-CIR-ROD-4-2.svg" width="200" height="200"/>
     </a>
 </div>
 
