@@ -4,9 +4,7 @@
 > README.md file under heavy construction. Please do not use this file if you see this alert. The information contained in this file may be misleading. Kindly wait for updates.
 
 <div align="center">
-    <a href="https://github.com/scottgriv/markdown-demo" target="_blank">
-        <img src="./docs/images/icon.svg" width="200" height="200"/>
-    </a>
+    <img src="./docs/images/icon.svg" width="200" height="200"/>
 </div>
 
 ---------------
@@ -25,7 +23,7 @@
 
 ---------------
 
-<h1 align="center">Comprehensive Markdown Guide</h1>
+<h1 align="center">EXAMPLE SECTION-</h1>
 
 This repository serves as a comprehensive guide to Markdown syntax. Markdown is a lightweight markup language that you can use to add formatting elements to plaintext text documents.
 
@@ -33,16 +31,26 @@ This repository serves as a comprehensive guide to Markdown syntax. Markdown is 
 
 ### Introduction
 ### Example enviroment to run project
-### Downloading
+
+<div align="center">
+    <img src="./docs/images/prereq.gif" width="800" height="385"/>
+</div>
+
+### Download and build
+
+<div align="center">
+    <img src="./docs/images/make.gif" width="800" height="385"/>
+</div>
+
 ### Build project
+
 ### lib_qrcodeqen example
 ### lib_svggen example
 ### List of QR-Code style examples
 
+<br>
 <div align="center">
-    <a href="https://github.com/scottgriv/markdown-demo" target="_blank">
-        <img src="./10_UserSvgStyleSample/CIS-CIE-CIE-4-1.svg" width="200" height="200"/>
-    </a>
+    <img src="./10_UserSvgStyleSample/CIS-CIE-CIE-4-1.svg" width="200" height="200"/>
 </div>
 
 ```cpp
@@ -58,11 +66,9 @@ cornerradius = 4;
 border = 1;	
 ```
 
----------------
+<br>
 <div align="center">
-    <a href="https://scottgrivner.dev" target="_blank">
-        <img src="./10_UserSvgStyleSample/SQU-CIE-CIS-4-2.svg" width="200" height="200"/>
-    </a>
+    <img src="./10_UserSvgStyleSample/SQU-CIE-CIS-4-2.svg" width="200" height="200"/>
 </div>
 
 ```cpp
@@ -78,11 +84,9 @@ cornerradius = 4;
 border = 2;	
 ```
 
----------------
+<br>
 <div align="center">
-    <a href="https://github.com/scottgriv/markdown-demo" target="_blank">
-        <img src="./10_UserSvgStyleSample/ROD-CIR-ROD-4-2.svg" width="200" height="200"/>
-    </a>
+    <img src="./10_UserSvgStyleSample/ROD-CIR-ROD-4-2.svg" width="200" height="200"/>
 </div>
 
 ```cpp
