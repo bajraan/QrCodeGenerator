@@ -1,51 +1,59 @@
 <!-- Begin README -->
 
-> [!CAUTION]
-> README.md file under heavy construction. Please do not use this file if you see this alert. The information contained in this file may be misleading. Kindly wait for updates.
-
 <div align="center">
     <img src="./docs/images/icon.svg" width="200" height="200"/>
 </div>
 <br>
 <p align="center">
     <a href="https://daringfireball.net/projects/markdown/"><img src="https://img.shields.io/badge/Markdown-1.0.1-000000?style=for-the-badge&logo=markdown" alt="Markdown Badge" /></a>
-    <br>
     <a href="https://github.com/bajraan"><img src="https://img.shields.io/badge/github-follow_me-181717?style=for-the-badge&logo=github&color=181717" alt="GitHub Badge" /></a>
-    <br>
     <a href="mailto:bajran1616@gmail.com"><img src="https://img.shields.io/badge/gmail-contact_me-EA4335?style=for-the-badge&logo=gmail" alt="Email Badge" /></a>
     <br>
 </p>
 
----------------
-> [!NOTE]  
-> This project is written for learning purposes. It is a library designed for generating QR codes and exporting them using specified design styles to .svg files.
+> [!NOTE]
+> This project builds upon the foundations of the following GitHub projects:
+> 
+> <p align="center">
+>     <a href="https://github.com/nayuki/QR-Code-generator">
+>         <img src="https://img.shields.io/badge/github-nayuki/QR--Code--generator-181717?logo=github&color=181717" alt="GitHub Badge" />
+>     </a><br>
+>     <a href="https://github.com/scottgriv/markdown-demo">
+>         <img src="https://img.shields.io/badge/github-scottgriv/markdown--demo-181717?logo=github&color=181717" alt="GitHub Badge" />
+>     </a>
+> </p>
+>
+> Created for educational purposes, this project serves as a library designed to generate QR codes and export them in specified design styles to .svg files.
+>
+> The repository is based on the nayuki/QR-Code-generator project, encompassing two libraries and a single demo .cpp file. The 'lib_qrcodegen' directory contains the original, unmodified files from the nayuki project, while the 'lib_svggen' directory introduces a newly designed library for exporting QR code objects to SVG files, enabling users to define their own styles.
 
-> [!NOTE]  
-> This project is written for learning purposes. It is a library designed for generating QR codes and exporting them using specified design styles to .svg files.
-> This repository has been designed based on nayuki/QR-Code-generator project.
-> Project contains two library and single demo .cpp file. Location lib_qrcodegen contains orginal not modified files from nayuki. Location liv_sbggen contains newly designed library to export qrcode objects to svg files
-> Folder lib_qrcodegen contains orginal not modified files from nayuki. 
----------------
 
-### Introduction
-### Example enviroment to run project
+---------------
+> [!TIP]
+> Wymagania
 
 <div align="center">
     <img src="./docs/images/prereq.gif" width="800" height="385"/>
 </div>
 
-### Download and build
+---------------
+
+> [!TIP]
+> Pobieranie i budowanie
 
 <div align="center">
     <img src="./docs/images/make.gif" width="800" height="385"/>
 </div>
 
-### Build project
+---------------
 
-### lib_qrcodeqen example
-### lib_svggen example
-### List of QR-Code style examples
+> [!TIP]
+> Example 
 
+> [!NOTE]  
+> This all examples may be found in QrCodeGeneratorDemo.cpp. They are genereted using demo fucntion called: doMarkdownExamples()
+
+<br>
 <br>
 <div align="center">
     <img src="./10_UserSvgStyleSample/CIS-CIE-CIE-4-1.svg" width="200" height="200"/>
@@ -99,69 +107,21 @@ sc.eyeframe = "ff0000";
 cornerradius = 4;
 border = 2;	
 ```
----------------
-
-> [!NOTE]  
-> This all examples may be found in QrCodeGeneratorDemo.cpp. They are genereted using demo fucntion called: doMarkdownExamples()
-
-> [!CAUTION]
-> README.md file under heavy construction. Please do not use this file if you see this alert. The information contained in this file may be misleading. Kindly wait for updates.
-
-### Alerts
-
-GitHub Flavored Markdown supports alerts that can be used to highlight important information:
-
-```markdown
-  > [!NOTE]  
-  > Highlights information that users should take into account, even when skimming.
-
-  > [!TIP]
-  > Optional information to help a user be more successful.
-
-  > [!IMPORTANT]  
-  > Crucial information necessary for users to succeed.
-
-  > [!WARNING]  
-  > Critical content demanding immediate user attention due to potential risks.
-
-  > [!CAUTION]
-  > Negative potential consequences of an action.
-```
-
-> [!NOTE]  
-> Highlights information that users should take into account, even when skimming.
-
-> [!TIP]
-> Optional information to help a user be more successful.
-
-> [!IMPORTANT]  
-> Crucial information necessary for users to succeed.
-
-> [!WARNING]  
-> Critical content demanding immediate user attention due to potential risks.
-
-> [!CAUTION]
-> Negative potential consequences of an action.
-
-### License
-
-This project is released under the terms of the **MIT License**, which permits use, modification, and distribution of the code, subject to the conditions outlined in the license.
-- The [MIT License](https://choosealicense.com/licenses/mit/) provides certain freedoms while preserving rights of attribution to the original creators.
-- For more details, see the [LICENSE](LICENSE) file in this repository. in this repository.
 
 ---------------
-### License
-<p align="center">
-    <a href="https://github.com/nayuki/QR-Code-generator"><img src="https://img.shields.io/badge/github-nayuki/QR--Code--generator-181717?logo=github&color=181717" alt="GitHub Badge" /></a><br>
-    <a href="hhttps://github.com/scottgriv/markdown-demo"><img src="https://img.shields.io/badge/github-scottgriv/markdown--demo-181717?logo=github&color=181717" alt="GitHub Badge" /></a>
-    <br>
-</p>
+---------------
+---------------
 
-
-
-
-
-> [!CAUTION]
-> README.md file under heavy construction. Please do not use this file if you see this alert. The information contained in this file may be misleading. Kindly wait for updates.
+> [!NOTE]
+> This project is built upon the foundations of the following GitHub projects:
+> 
+> <p align="center">
+>     <a href="https://github.com/nayuki/QR-Code-generator">
+>         <img src="https://img.shields.io/badge/github-nayuki/QR--Code--generator-181717?logo=github&color=181717" alt="GitHub Badge" />
+>     </a><br>
+>     <a href="https://github.com/scottgriv/markdown-demo">
+>         <img src="https://img.shields.io/badge/github-scottgriv/markdown--demo-181717?logo=github&color=181717" alt="GitHub Badge" />
+>     </a>
+> </p>
 
 <!-- End README -->
