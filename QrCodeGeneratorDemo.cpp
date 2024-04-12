@@ -46,7 +46,8 @@ using svggen::SvgData;
 
 // Function prototypes
 static void doBasicDemo();
-static void doVectorExportDemo();
+static void doVectorExportDemoDark();
+static void doVectorExportDemoBright();
 static void doVarietyDemo();
 static void doSegmentDemo();
 static void doMaskDemo();
@@ -56,12 +57,13 @@ static void printQr(const QrCode &qr);
 
 // The main application program.
 int main() {
-	doBasicDemo();
-	doVectorExportDemo();
-	doVarietyDemo();
-	doSegmentDemo();
-	doMaskDemo();
-	doMarkDownExamples();
+	//doBasicDemo();
+	doVectorExportDemoDark();
+	doVectorExportDemoBright();
+	//doVarietyDemo();
+	//doSegmentDemo();
+	//doMaskDemo();
+	//doMarkDownExamples();
 	return EXIT_SUCCESS;
 }
 
@@ -71,7 +73,7 @@ int main() {
 
 // Creates a single QR Code, then prints it to the console.
 static void doBasicDemo() {
-	const char *text = "https://ideone.com/zw9jJg";  // User-supplied text
+	const char *text = "001[Spain][Circuit de Barcelona-Catalunya].png";  // User-supplied text
 	const QrCode::Ecc errCorLvl = QrCode::Ecc::LOW ;  // Error correction level
 	
 	// Make and print the QR Code symbol
@@ -81,32 +83,231 @@ static void doBasicDemo() {
 }
 
 // Creates a single QR Code, then exports it to the vector (.SVG) file.
-static void doVectorExportDemo() {
-	const char *text = "https://ideone.com/zw9jJg";  // User-supplied text
-	const QrCode::Ecc errCorLvl = QrCode::Ecc::LOW ; // Error correction level
-	
-	// Make the QR Code symbol
-	const QrCode qr = QrCode::encodeText(text, errCorLvl);
+static void doVectorExportDemoDark() {
+	const char *text = "BaJRan imaginary industries"; 
+	const QrCode::Ecc errCorLvl = QrCode::Ecc::LOW ;
+	QrCode qr = QrCode::encodeText(text, errCorLvl);
 
-	// Determine .SVG style
-	SvgData::StyleShape st;								// Examples can be found in
-		st.bodystyle     = SvgData::body::CIRCLES;		// 10_UserSvgStyleSample 
-		st.eyeballstyle  = SvgData::eyeball::CIRCLE;	// directory
-		st.eyeframestyle = SvgData::eyeframe::CIRCLE;	//
-	SvgData::StyleColor sc;								//
-		sc.background = "AAFF00";						//
-		sc.body = "011620";								//
-		sc.eyeball = "1010FF";							//
-		sc.eyeframe = "0116AA";							//
-	int cornerradius = 4;								//
-	int border = 1;										//
+	// Determine .SVG style DARK
+	SvgData::StyleShape st;
+		st.bodystyle     = SvgData::body::ROUNDED;
+		st.eyeballstyle  = SvgData::eyeball::CIRCLE;
+		st.eyeframestyle = SvgData::eyeframe::CIRCLE;
+	SvgData::StyleColor sc;	
+		sc.background = "011627";
+		sc.body = "c7ef00";
+		sc.eyeball = "ed254e";
+		sc.eyeframe = "ed254e";					
+	int cornerradius = 5;			
+	int border = 1;							
 
-	// Create .SVG object based on created st,sc,cornerradius,border style
 	SvgData sd = SvgData(qr,st,sc,border,cornerradius);
+    sd.exportSvgDataToFile("logoTEST_Dark");
 
-	// Save created QR Code to the .svg file
-	// Saved file will be stored in /11_UserSvgOutput directorY
-    sd.exportSvgDataToFile("ret1");
+
+	text = "https://ideone.com/Z6GJvR";
+	qr = QrCode::encodeText(text, errCorLvl);
+	sd = SvgData(qr,st,sc,border,cornerradius);
+	sd.exportSvgDataToFile("LINK_001[Z6GJvR]");
+	text = "TEST\nTEST\n4";
+	qr = QrCode::encodeText(text, errCorLvl);
+	sd = SvgData(qr,st,sc,border,cornerradius);
+	sd.exportSvgDataToFile("TEXT_001[Z6GJvR]");
+
+
+	text = "https://ideone.com/9r5aWL";
+	qr = QrCode::encodeText(text, errCorLvl);
+	sd = SvgData(qr,st,sc,border,cornerradius);
+	sd.exportSvgDataToFile("LINK_002[9r5aWL]");
+	text = "jjj\naaa: 1\naaa: 2\naaa: 3";
+	qr = QrCode::encodeText(text, errCorLvl);
+	sd = SvgData(qr,st,sc,border,cornerradius);
+	sd.exportSvgDataToFile("TEXT_002[9r5aWL]");
+
+
+	text = "https://ideone.com/yKKHoR";
+	qr = QrCode::encodeText(text, errCorLvl);
+	sd = SvgData(qr,st,sc,border,cornerradius);
+	sd.exportSvgDataToFile("LINK_003[yKKHoR]");
+	text = "zzz\n4";
+	qr = QrCode::encodeText(text, errCorLvl);
+	sd = SvgData(qr,st,sc,border,cornerradius);
+	sd.exportSvgDataToFile("TEXT_003[yKKHoR]");
+
+
+	text = "https://ideone.com/VVp5g2";
+	qr = QrCode::encodeText(text, errCorLvl);
+	sd = SvgData(qr,st,sc,border,cornerradius);
+	sd.exportSvgDataToFile("LINK_004[VVp5g2]");
+	text = "loop: 4";
+	qr = QrCode::encodeText(text, errCorLvl);
+	sd = SvgData(qr,st,sc,border,cornerradius);
+	sd.exportSvgDataToFile("TEXT_004[VVp5g2]");
+
+
+	text = "https://ideone.com/hQDSva";
+	qr = QrCode::encodeText(text, errCorLvl);
+	sd = SvgData(qr,st,sc,border,cornerradius);
+	sd.exportSvgDataToFile("LINK_005[hQDSva]");
+	text = "1 2 3";
+	qr = QrCode::encodeText(text, errCorLvl);
+	sd = SvgData(qr,st,sc,border,cornerradius);
+	sd.exportSvgDataToFile("TEXT_005[hQDSva]");
+
+
+	text = "https://ideone.com/2x7ljg ";
+	qr = QrCode::encodeText(text, errCorLvl);
+	sd = SvgData(qr,st,sc,border,cornerradius);
+	sd.exportSvgDataToFile("LINK_006[2x7ljg]");
+	text = "4";
+	qr = QrCode::encodeText(text, errCorLvl);
+	sd = SvgData(qr,st,sc,border,cornerradius);
+	sd.exportSvgDataToFile("TEXT_006[2x7ljg]");
+
+
+	text = "https://ideone.com/n79QAx";
+	qr = QrCode::encodeText(text, errCorLvl);
+	sd = SvgData(qr,st,sc,border,cornerradius);
+	sd.exportSvgDataToFile("LINK_007[n79QAx]");
+	text = "3";
+	qr = QrCode::encodeText(text, errCorLvl);
+	sd = SvgData(qr,st,sc,border,cornerradius);
+	sd.exportSvgDataToFile("TEXT_007[n79QAx]");
+
+
+	text = "https://ideone.com/3er0o8";
+	qr = QrCode::encodeText(text, errCorLvl);
+	sd = SvgData(qr,st,sc,border,cornerradius);
+	sd.exportSvgDataToFile("LINK_008[3er0o8]");
+	text = "3";
+	qr = QrCode::encodeText(text, errCorLvl);
+	sd = SvgData(qr,st,sc,border,cornerradius);
+	sd.exportSvgDataToFile("TEXT_008[3er0o8]");
+
+
+	text = "https://ideone.com/pCsilP";
+	qr = QrCode::encodeText(text, errCorLvl);
+	sd = SvgData(qr,st,sc,border,cornerradius);
+	sd.exportSvgDataToFile("LINK_009[pCsilP]");
+	text = "1";
+	qr = QrCode::encodeText(text, errCorLvl);
+	sd = SvgData(qr,st,sc,border,cornerradius);
+	sd.exportSvgDataToFile("TEXT_009[pCsilP]");
+
+
+	text = "https://ideone.com/Bj780F";
+	qr = QrCode::encodeText(text, errCorLvl);
+	sd = SvgData(qr,st,sc,border,cornerradius);
+	sd.exportSvgDataToFile("LINK_010[Bj780F]");
+	text = "-3";
+	qr = QrCode::encodeText(text, errCorLvl);
+	sd = SvgData(qr,st,sc,border,cornerradius);
+	sd.exportSvgDataToFile("TEXT_010[Bj780F]");
+
+
+	text = "https://ideone.com/zgP9Ye";
+	qr = QrCode::encodeText(text, errCorLvl);
+	sd = SvgData(qr,st,sc,border,cornerradius);
+	sd.exportSvgDataToFile("LINK_011[zgP9Ye]");
+	text = "18";
+	qr = QrCode::encodeText(text, errCorLvl);
+	sd = SvgData(qr,st,sc,border,cornerradius);
+	sd.exportSvgDataToFile("TEXT_011[zgP9Ye]");
+
+}
+
+static void doVectorExportDemoBright(){
+
+	const char *text = "BaJRan imaginary industries"; 
+	const QrCode::Ecc errCorLvl = QrCode::Ecc::LOW ;
+	QrCode qr = QrCode::encodeText(text, errCorLvl);
+
+	// Determine .SVG style Bright
+	SvgData::StyleShape st;
+		st.bodystyle     = SvgData::body::ROUNDED;
+		st.eyeballstyle  = SvgData::eyeball::CIRCLE;
+		st.eyeframestyle = SvgData::eyeframe::CIRCLE;
+	SvgData::StyleColor sc;	
+		sc.background = "fdf6e3"; 
+		sc.body = "011627";
+		sc.eyeball = "ed254e";
+		sc.eyeframe = "ed254e";					
+	int cornerradius = 5;			
+	int border = 1;							
+
+	SvgData sd = SvgData(qr,st,sc,border,cornerradius);
+    sd.exportSvgDataToFile("logoTEST_Bright");
+
+
+	text = "https://ideone.com/2D7udz";
+	qr = QrCode::encodeText(text, errCorLvl);
+	sd = SvgData(qr,st,sc,border,cornerradius);
+	sd.exportSvgDataToFile("LINK_012[2D7udz]");
+	text = "2";
+	qr = QrCode::encodeText(text, errCorLvl);
+	sd = SvgData(qr,st,sc,border,cornerradius);
+	sd.exportSvgDataToFile("TEXT_012[2D7udz]");
+
+
+	text = "https://ideone.com/8ZrcHg";
+	qr = QrCode::encodeText(text, errCorLvl);
+	sd = SvgData(qr,st,sc,border,cornerradius);
+	sd.exportSvgDataToFile("LINK_013[8ZrcHg]");
+	text = "6\n6\n6";
+	qr = QrCode::encodeText(text, errCorLvl);
+	sd = SvgData(qr,st,sc,border,cornerradius);
+	sd.exportSvgDataToFile("TEXT_013[8ZrcHg]");
+
+
+	text = "https://ideone.com/uVMs8l";
+	qr = QrCode::encodeText(text, errCorLvl);
+	sd = SvgData(qr,st,sc,border,cornerradius);
+	sd.exportSvgDataToFile("LINK_014[uVMs8l]");
+	text = "16,4,2";
+	qr = QrCode::encodeText(text, errCorLvl);
+	sd = SvgData(qr,st,sc,border,cornerradius);
+	sd.exportSvgDataToFile("TEXT_014[uVMs8l]");
+
+
+	text = "https://ideone.com/fbx6aM";
+	qr = QrCode::encodeText(text, errCorLvl);
+	sd = SvgData(qr,st,sc,border,cornerradius);
+	sd.exportSvgDataToFile("LINK_015[fbx6aM]");
+	text = "0,2";
+	qr = QrCode::encodeText(text, errCorLvl);
+	sd = SvgData(qr,st,sc,border,cornerradius);
+	sd.exportSvgDataToFile("TEXT_015[fbx6aM]");
+
+
+	text = "https://ideone.com/LKFbH4";
+	qr = QrCode::encodeText(text, errCorLvl);
+	sd = SvgData(qr,st,sc,border,cornerradius);
+	sd.exportSvgDataToFile("LINK_016[LKFbH4]");
+	text = "0";
+	qr = QrCode::encodeText(text, errCorLvl);
+	sd = SvgData(qr,st,sc,border,cornerradius);
+	sd.exportSvgDataToFile("TEXT_016[LKFbH4]");
+
+
+	text = "https://ideone.com/suICve";
+	qr = QrCode::encodeText(text, errCorLvl);
+	sd = SvgData(qr,st,sc,border,cornerradius);
+	sd.exportSvgDataToFile("LINK_017[suICve]");
+	text = "1,2";
+	qr = QrCode::encodeText(text, errCorLvl);
+	sd = SvgData(qr,st,sc,border,cornerradius);
+	sd.exportSvgDataToFile("TEXT_017[suICve]");
+
+
+	text = "https://ideone.com/NrWuvS";
+	qr = QrCode::encodeText(text, errCorLvl);
+	sd = SvgData(qr,st,sc,border,cornerradius);
+	sd.exportSvgDataToFile("LINK_018[NrWuvS]");
+	text = "2,2\n1,1\n0,0";
+	qr = QrCode::encodeText(text, errCorLvl);
+	sd = SvgData(qr,st,sc,border,cornerradius);
+	sd.exportSvgDataToFile("TEXT_018[NrWuvS]");
+
 
 }
 
